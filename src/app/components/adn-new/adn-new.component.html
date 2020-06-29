@@ -1,0 +1,17 @@
+        <small *ngIf= "status == 'error'" class="alert-danger invalid-feedback d-block">
+                    Registro incorrecto, intenta nuevamente 
+        </small>
+            <div class="blue-square-container">
+            <div class="blue-square"></div>
+        </div>
+        <form #newForm="ngForm" (ngSubmit)="onSubmit(newForm)">
+            <div class="form-group">
+                <label for="name"></label>
+                <input type="name" name="name"  placeholder="Nombre de humano" class="form-control" #name="ngModel" [(ngModel)]="adn_model.name" required >
+                <small *ngIf= "name.touched && adn_model.name == null" class="invalid-feedback d-block">
+                        Se requiere el nombre
+                </small>
+            </div>
+            <br>
+            <input type="submit" value="Crear humano" class="btn new-button" [disabled]="newForm.invalid" />
+        </form>

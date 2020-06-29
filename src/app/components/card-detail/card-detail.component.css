@@ -1,0 +1,31 @@
+h1,
+h3,
+h4,
+h5{
+  text-align: center;
+}
+
+.square-container{
+  text-align: center;
+}
+
+.green-square {
+  background-color: #068A1B;
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  border-radius: 50px;
+}
+.orange-square {
+    background-color: #c93709;
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    border-radius: 50px;
+  }
+  .orange{
+    color:#c93709;
+  }
+  .green{
+    color:#068A1B;
+  }

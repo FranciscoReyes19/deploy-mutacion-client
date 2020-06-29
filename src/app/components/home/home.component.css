@@ -1,0 +1,16 @@
+.modal-content{
+    text-align: center;
+}
+.badge{
+    text-align: center;
+    
+}
+.buttons-section{
+    text-align:right;
+
+}
+.buttons-section .btn{
+    color:white;
+    border-radius: 20px;
+    width: 150px;
+}

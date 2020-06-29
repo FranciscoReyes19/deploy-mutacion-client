@@ -1,0 +1,26 @@
+<div class="row">
+<div class="col-6 container-right">
+	<br><br><br><br><br>
+	<small *ngIf= "status == 'error'" class="alert-danger col-md-5 mt-3 invalid-feedback d-block">
+				Login incorrecto, intenta nuevamente 
+	</small>
+	<form class="custom-padding background-white" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+		<div class="form-group">
+			<label for="usernameOrEmail"></label>
+			<input type="usernameOrEmail" name="usernameOrEmail"  placeholder="Email" class="form-control" #usernameOrEmail="ngModel" [(ngModel)]="user.usernameOrEmail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+			<small *ngIf= "!usernameOrEmail.valid && usernameOrEmail.touched" class="invalid-feedback d-block">
+					El correo no es valido
+			</small>
+		</div>
+		<div class="form-group">
+			<label for="password"></label>
+			<input type="password" name="password" placeholder="Contraseña" class="form-control" #password="ngModel" [(ngModel)]
+			="user.password" required >
+			<small *ngIf= "!password.valid && password.touched" class="invalid-feedback d-block">
+				La contraseña no es valida
+			</small>
+		</div>
+		<input type="submit" value="Ingresar" class="btn login-button" [disabled]="loginForm.invalid" />
+	</form>
+</div>	
+</div>

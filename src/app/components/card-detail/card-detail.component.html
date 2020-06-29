@@ -1,0 +1,20 @@
+<div class="card-columns">
+    <article class="card w-90" *ngFor="let expediente of expedientes">
+        <div class="square-container mt-3">
+            <div *ngIf="expediente.result" class="orange-square"></div>
+            <div *ngIf="!expediente.result" class="green-square"></div>
+        </div>
+        <div class="card-body w-90 post-image">
+        <div class="content">
+            <h3>{{expediente.name}}</h3>
+            <h5>
+            Creado en: {{ expediente.createdAt | amLocale: 'es' | amDateFormat: 'YYYY/MM/DD' }}
+            </h5>
+            <hr>
+            <h3 *ngIf="expediente.result" class="orange">CON MUTACIÓN</h3>
+            <h3 *ngIf="!expediente.result" class="green">SIN MUTACIÓN</h3>
+        </div>
+            <!--botones de accion ricardo.reyesfrt@outlook.com ro15pk16-->
+        </div>
+    </article>
+</div>
